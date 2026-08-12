@@ -6,19 +6,19 @@
 
 <p align="center">
   <strong>Adaptive Security Platform for Web3</strong><br/>
-  <em>Passwordless wallet authentication · AI anomaly detection · LLM data guardrails · Ethereum audit trails</em>
+  <em>Wallet authentication · Adaptive risk scoring · Data leak prevention · Transaction protection · On-chain audit trails</em>
 </p>
 
 <p align="center">
-  <a href="#-features"><img src="https://img.shields.io/badge/Features-8-emerald?style=flat-square" alt="Features" /></a>
+  <a href="#-features"><img src="https://img.shields.io/badge/Features-9-emerald?style=flat-square" alt="Features" /></a>
   <a href="#-quick-start"><img src="https://img.shields.io/badge/Quick_Start-5_min-blue?style=flat-square" alt="Quick Start" /></a>
   <a href="https://sepolia.etherscan.io"><img src="https://img.shields.io/badge/Network-Sepolia-purple?style=flat-square" alt="Sepolia" /></a>
   <a href="#-license"><img src="https://img.shields.io/badge/License-MIT-green?style=flat-square" alt="License" /></a>
 </p>
 
 <p align="center">
-  <a href="https://github.com/MohitRawat017/SentinalX">
-    <img src="https://img.shields.io/github/stars/MohitRawat017/SentinalX?style=social" alt="GitHub Stars" />
+  <a href="https://github.com/Melioskf/Sentinel-X">
+    <img src="https://img.shields.io/github/stars/Melioskf/Sentinel-X?style=social" alt="GitHub Stars" />
   </a>
 </p>
 
@@ -26,14 +26,23 @@
 
 ## 🎯 What is SentinelX?
 
-**SentinelX** is a next-generation security layer for modern web applications. It combines:
+**SentinelX** is an adaptive security platform for Web3 applications. It combines wallet-based authentication, history-aware risk scoring, data leak prevention, transaction risk analysis, real-time security telemetry, and tamper-evident audit trails.
 
-- 🔐 **Passwordless Authentication** — Sign in with Ethereum wallets (MetaMask, WalletConnect)
-- 🧠 **AI-Powered Risk Detection** — Real-time anomaly scoring using machine learning
-- 🛡️ **Data Leak Prevention** — LLM + regex-based content scanning (GuardLayer)
-- ⛓️ **Blockchain Audit Trail** — Immutable, Merkle-batched proofs on Ethereum
+The platform is designed around a simple principle:
 
-> *SentinelX doesn't just verify who you are — it protects **what** you do.*
+> **Authenticate the user, evaluate the context, protect the action, and preserve an auditable security trail.**
+
+### Core capabilities
+
+- 🔐 **Passwordless wallet authentication** using Sign-In with Ethereum (SIWE)
+- 🧠 **Adaptive risk scoring** based on login history and behavioral signals
+- 🛡️ **GuardLayer DLP** using local pattern detection with optional LLM analysis
+- 💸 **Transaction risk analysis** for Web3 actions before execution
+- ⛓️ **Merkle-batched audit trails** with Ethereum Sepolia anchoring
+- 📊 **Live security dashboard** with risk, login, audit, and activity telemetry
+- 🚨 **Step-up authentication** for elevated-risk sessions
+- 💬 **Real-time secure chat** with expiring messages and GuardLayer protection
+- 🎮 **Attack Simulation Lab** for demonstrating defensive controls
 
 ---
 
@@ -44,23 +53,27 @@
 <td width="50%">
 
 ### 🔑 SIWE Wallet Authentication
-Passwordless login with **Sign-In with Ethereum (EIP-4361)**. No passwords, no emails — just your wallet.
+Passwordless authentication with **Sign-In with Ethereum (EIP-4361)**.
 
-- MetaMask & WalletConnect support
-- Session management with JWT
-- Automatic geo-location tracking
+- Wallet-based login
+- JWT session management
+- Nonce validation
+- MetaMask / WalletConnect-compatible wallet flow
+- Login context and geographic metadata
 
 </td>
 <td width="50%">
 
-### 🧠 AI Risk Engine
-Real-time behavioral analysis using **IsolationForest** anomaly detection with 5 key features:
+### 🧠 Adaptive Risk Engine
+History-aware login risk scoring using graduated behavioral factors:
 
-- IP location entropy
-- Time-of-day deviation
-- Device fingerprinting
-- Login velocity analysis
-- Trust score calculation
+- New device / browser
+- New geographic location
+- Rapid login attempts
+- Unusual login time
+- Explainable factor contributions
+
+Risk is normalized to **0–1** and classified as **low, medium, or high**.
 
 </td>
 </tr>
@@ -68,45 +81,73 @@ Real-time behavioral analysis using **IsolationForest** anomaly detection with 5
 <td width="50%">
 
 ### 🛡️ GuardLayer DLP
-Dual-layer content scanning to prevent data leaks:
+Multi-layer protection for sensitive content:
 
-- **Regex Layer**: Credit cards, passwords, API keys
-- **LLM Layer**: Context-aware PII detection
-- User override tracking for audit
+- Local pattern/regex scanning
+- Optional OpenRouter LLM analysis
+- Sensitive-data detection
+- User override tracking
+- Enforcement hooks for protected content
 
 </td>
 <td width="50%">
 
-### ⛓️ On-Chain Audit Trail
-Every security event is recorded on **Ethereum Sepolia**:
+### 💸 Transaction Risk Engine
+Evaluate Web3 transaction context before sensitive actions:
 
-- Merkle tree batching (gas-efficient)
-- Verifiable inclusion proofs
-- Immutable, transparent logs
+- Transaction risk scoring
+- Risk-factor explanations
+- Policy/enforcement integration
+- Security events for high-risk activity
 
 </td>
 </tr>
 <tr>
 <td width="50%">
 
-### 📊 Security Dashboard
-Beautiful, real-time visualization of your security posture:
+### ⛓️ Merkle Audit Trail
+Security events can be grouped into Merkle batches and anchored on **Ethereum Sepolia**.
 
-- Risk score timeline charts
-- World map of login origins
-- Recent security events feed
-- Trust score indicators
+- Gas-efficient root storage
+- Batch event counts and timestamps
+- Inclusion-proof verification
+- No raw security-event payloads required on-chain
 
 </td>
 <td width="50%">
 
+### 📊 Security Dashboard
+Centralized visibility into the security posture:
+
+- Risk timeline
+- Login-origin map
+- Recent security events
+- Trust / risk indicators
+- Security reports
+
+</td>
+</tr>
+<tr>
+<td width="50%">
+
 ### 🚨 Step-Up Authentication
-Adaptive challenges when risk is detected:
+Adaptive friction when a login crosses a configured risk threshold:
 
 - Secondary wallet signature
-- Trust score boosting
-- Configurable thresholds
-- Skip option with restricted access
+- Trust-score updates
+- Configurable challenge flow
+- Restricted access when verification is skipped
+
+</td>
+<td width="50%">
+
+### 💬 Secure Real-Time Chat
+Security-aware messaging integrated with the platform:
+
+- WebSocket-based communication
+- GuardLayer scanning
+- Message expiration / cleanup
+- Protected conversation flow
 
 </td>
 </tr>
@@ -114,22 +155,23 @@ Adaptive challenges when risk is detected:
 <td width="50%">
 
 ### 🎮 Attack Simulation Lab
-Test your security with built-in attack scenarios:
+Demonstrate the security controls with repeatable scenarios:
 
-- Suspicious login simulation
-- Data leak attempts
-- Burst attack patterns
-- Full demo mode
+- Suspicious login attempts
+- Data-leak attempts
+- Burst / rapid-login patterns
+- Transaction-risk scenarios
+- Demo-data generation
 
 </td>
 <td width="50%">
 
 ### 📦 JavaScript SDK
-Drop-in integration for any web app:
+The SDK provides integration building blocks for applications that want to embed SentinelX security controls.
 
-- One-line authentication
-- GuardLayer DOM injection
-- Configurable security policies
+- Authentication integration
+- GuardLayer integration
+- Configurable policies
 - Event callbacks
 
 </td>
@@ -140,35 +182,32 @@ Drop-in integration for any web app:
 
 ## 🏗️ Architecture
 
+```text
+┌─────────────────────────────────────────────────────────────────────┐
+│                    FRONTEND (React + Vite)                          │
+│                                                                     │
+│  Wallet Auth │ Dashboard │ GuardLayer │ Chat │ Simulation │ Txns    │
+└──────────────────────────────┬──────────────────────────────────────┘
+                               │ HTTP / WebSocket
+                               ▼
+┌─────────────────────────────────────────────────────────────────────┐
+│                       BACKEND (FastAPI)                             │
+│                                                                     │
+│  SIWE + JWT        Adaptive Risk Engine        GuardLayer DLP       │
+│  Transaction Risk  Dashboard / Reports         Chat / WebSockets    │
+│  Simulation        Merkle Audit Batcher        Enforcement          │
+└───────────────┬──────────────────────────────┬─────────────────────┘
+                │                              │
+                ▼                              ▼
+┌───────────────────────────┐      ┌─────────────────────────────────┐
+│ PostgreSQL / SQLAlchemy   │      │ Ethereum Sepolia                │
+│                           │      │                                 │
+│ Users, sessions, login    │      │ AuditProofBatch.sol             │
+│ events, messages, audits  │      │ Stores Merkle roots + metadata  │
+└───────────────────────────┘      └─────────────────────────────────┘
 ```
-┌─────────────────────────────────────────────────────────────────────┐
-│                    FRONTEND (React + Vite + TailwindCSS)            │
-│  ┌────────────┐ ┌────────────┐ ┌───────────┐ ┌─────────────────┐   │
-│  │   Wallet   │ │  Security  │ │ GuardLayer│ │   Simulation    │   │
-│  │    Auth    │ │  Dashboard │ │  Scanner  │ │      Lab        │   │
-│  └─────┬──────┘ └─────┬──────┘ └─────┬─────┘ └───────┬─────────┘   │
-└────────┼──────────────┼──────────────┼───────────────┼──────────────┘
-         │              │              │               │
-         ▼              ▼              ▼               ▼
-┌─────────────────────────────────────────────────────────────────────┐
-│                      BACKEND (FastAPI + Python)                      │
-│  ┌──────────┐ ┌─────────────┐ ┌───────────┐ ┌──────────────────┐   │
-│  │   SIWE   │ │    Risk     │ │ GuardLayer│ │  Merkle Batching │   │
-│  │ + JWT    │ │   Engine    │ │ Regex+LLM │ │  + Audit Trail   │   │
-│  │          │ │(IsoForest)  │ │           │ │                  │   │
-│  └──────────┘ └─────────────┘ └───────────┘ └────────┬─────────┘   │
-└──────────────────────────────────────────────────────┼──────────────┘
-                                                       │
-                                                       ▼
-┌─────────────────────────────────────────────────────────────────────┐
-│                    ETHEREUM (Sepolia Testnet)                        │
-│                                                                      │
-│   AuditProofBatch.sol                                               │
-│   ├─ storeBatch(bytes32 root)         → Store Merkle root on-chain  │
-│   └─ verifyInclusion(leaf, proof[])   → Verify event inclusion      │
-│                                                                      │
-└─────────────────────────────────────────────────────────────────────┘
-```
+
+The backend starts background tasks for **Merkle batching** and **expired-message cleanup**. The blockchain layer stores batch roots and metadata rather than raw application/security data.
 
 ---
 
@@ -176,17 +215,19 @@ Drop-in integration for any web app:
 
 ### Prerequisites
 
-| Requirement | Version |
-|-------------|---------|
-| Python | 3.10+ |
+| Requirement | Version / Notes |
+|-------------|-----------------|
+| Python | 3.10+ recommended |
 | Node.js | 18+ |
-| MetaMask | Latest (optional) |
+| PostgreSQL | Required for the backend database |
+| MetaMask | Optional for wallet flows |
+| Sepolia RPC | Required only for on-chain deployment/use |
 
 ### 1️⃣ Clone the Repository
 
 ```bash
-git clone https://github.com/MohitRawat017/SentinalX.git
-cd SentinalX
+git clone https://github.com/Melioskf/Sentinel-X.git
+cd Sentinel-X
 ```
 
 ### 2️⃣ Backend Setup
@@ -194,28 +235,34 @@ cd SentinalX
 ```bash
 cd backend
 
-# Create virtual environment
 python -m venv venv
 
-# Activate (Windows)
+# Windows
 venv\Scripts\activate
-# Activate (macOS/Linux)
+
+# macOS / Linux
 # source venv/bin/activate
 
-# Install dependencies
 pip install -r requirements.txt
 
-# Configure environment
+# Copy the environment template and configure it
+# Windows:
 copy .env.example .env
-# Edit .env with your API keys (optional for demo mode)
+# macOS / Linux:
+# cp .env.example .env
 
-# Start server
 uvicorn main:app --reload --port 8000
 ```
 
-> 📍 Backend runs at **http://localhost:8000** | API docs at **http://localhost:8000/docs**
+Backend endpoints are available at **http://localhost:8000**.
+
+FastAPI's interactive API documentation is available at **http://localhost:8000/docs**.
+
+Health check: **http://localhost:8000/health**
 
 ### 3️⃣ Frontend Setup
+
+Open a second terminal:
 
 ```bash
 cd frontend
@@ -223,7 +270,7 @@ npm install
 npm run dev
 ```
 
-> 📍 Dashboard opens at **http://localhost:5174**
+Vite is configured to serve the frontend at **http://localhost:5173** and proxy `/api` requests to the backend on port `8000`.
 
 ### 4️⃣ Smart Contracts (Optional)
 
@@ -232,11 +279,15 @@ cd contracts
 npm install
 npx hardhat compile
 
-# Deploy to Sepolia
+# Deploy to Sepolia after configuring your RPC URL/private key
 npx hardhat run scripts/deploy.js --network sepolia
 ```
 
+After deployment, set `AUDIT_CONTRACT_ADDRESS` in the backend environment.
+
 ### 5️⃣ SDK
+
+If you are working on the SDK package, install and build it from its directory:
 
 ```bash
 cd sdk
@@ -246,69 +297,108 @@ npm run build
 
 ---
 
+## ⚙️ Environment Configuration
+
+The backend reads configuration from environment variables. Start with `backend/.env.example`.
+
+| Variable | Purpose |
+|----------|---------|
+| `SECRET_KEY` | JWT signing secret |
+| `ALGORITHM` | JWT algorithm, e.g. `HS256` |
+| `ACCESS_TOKEN_EXPIRE_MINUTES` | JWT lifetime |
+| `OPENROUTER_API_KEY` | Optional LLM access for GuardLayer |
+| `SEPOLIA_RPC_URL` | Ethereum Sepolia RPC endpoint |
+| `DEPLOYER_PRIVATE_KEY` | Contract deployment key |
+| `AUDIT_CONTRACT_ADDRESS` | Deployed `AuditProofBatch` address |
+| `DATABASE_URL` | PostgreSQL connection string |
+| `FRONTEND_URL` | Allowed frontend origin(s) |
+
+**Never commit real API keys, private keys, JWT secrets, or database credentials.**
+
+---
+
 ## 🎮 Demo Walkthrough
 
-1. **Open** → http://localhost:5174
-2. **Click** → "Get Started" on the landing page
-3. **Login** → Use MetaMask or "Login with Google" for demo mode
-4. **Dashboard** → Click "Seed Demo Data" to generate sample data
-5. **Explore** → View Risk Timeline, Login Map, and Recent Events
-6. **Chat** → Test secure messaging with GuardLayer protection
-7. **Simulation** → Run attack scenarios in the Simulation Lab
-8. **Audit** → Verify Merkle proofs in the Audit Trail
+1. Start the backend on `localhost:8000`.
+2. Start the frontend on `localhost:5173`.
+3. Open the SentinelX dashboard.
+4. Authenticate with the wallet flow or use the application's demo path when available.
+5. Seed demo data from the dashboard if you want sample telemetry.
+6. Inspect the risk timeline and login-origin data.
+7. Test GuardLayer with sensitive-looking text.
+8. Run an attack scenario in the Simulation Lab.
+9. Test transaction-risk analysis for Web3 actions.
+10. Inspect audit batches and verify Merkle inclusion proofs.
 
 ---
 
 ## 🔌 API Reference
 
-### Authentication
+All routers are mounted by the FastAPI application under the prefixes below. For request/response schemas, use **`/docs`** while the backend is running.
+
+### Authentication — `/auth`
 
 | Endpoint | Method | Description |
 |----------|--------|-------------|
-| `/auth/nonce` | GET | Generate SIWE nonce |
-| `/auth/verify` | POST | Verify wallet signature + risk scoring |
-| `/auth/session` | GET | Check JWT session validity |
-| `/auth/challenge` | POST | Request step-up challenge |
-| `/auth/step-up/verify` | POST | Verify step-up signature |
+| `/auth/nonce` | GET | Generate a SIWE nonce |
+| `/auth/verify` | POST | Verify wallet signature and evaluate login risk |
+| `/auth/session` | GET | Check the current JWT session |
+| `/auth/challenge` | POST | Request a step-up challenge |
+| `/auth/step-up/verify` | POST | Verify the step-up signature |
 
-### Risk Intelligence
-
-| Endpoint | Method | Description |
-|----------|--------|-------------|
-| `/risk/score` | POST | Compute risk score for features |
-| `/risk/timeline` | GET | Get risk score history |
-| `/risk/map` | GET | Get login origin coordinates |
-
-### GuardLayer
+### Risk Intelligence — `/risk`
 
 | Endpoint | Method | Description |
 |----------|--------|-------------|
-| `/guard/scan` | POST | Scan text for sensitive data |
-| `/guard/override` | POST | Record user override decision |
+| `/risk/score` | POST | Calculate login risk |
+| `/risk/timeline` | GET | Retrieve risk history |
+| `/risk/map` | GET | Retrieve login-origin coordinates |
 
-### Audit Trail
+### GuardLayer — `/guard`
+
+| Endpoint | Method | Description |
+|----------|--------|-------------|
+| `/guard/scan` | POST | Scan content for sensitive data |
+| `/guard/override` | POST | Record a user override |
+
+### Audit Trail — `/audit`
 
 | Endpoint | Method | Description |
 |----------|--------|-------------|
 | `/audit/batches` | GET | List Merkle batches |
-| `/audit/batch` | POST | Force create a batch |
-| `/audit/verify` | POST | Verify Merkle inclusion proof |
-| `/audit/pending` | GET | Get pending events |
+| `/audit/batch` | POST | Force creation of a batch |
+| `/audit/verify` | POST | Verify a Merkle inclusion proof |
+| `/audit/pending` | GET | List pending audit events |
 
-### Dashboard
+### Dashboard — `/dashboard`
 
 | Endpoint | Method | Description |
 |----------|--------|-------------|
-| `/dashboard/overview` | GET | Aggregated dashboard data |
-| `/dashboard/security-report` | GET | AI-generated security report |
+| `/dashboard/overview` | GET | Aggregated security dashboard data |
+| `/dashboard/security-report` | GET | Generate a security report |
 | `/dashboard/seed` | POST | Seed demo data |
 
-### Simulation
+### Simulation — `/simulation`
 
 | Endpoint | Method | Description |
 |----------|--------|-------------|
 | `/simulation/scenarios` | GET | List available scenarios |
-| `/simulation/run` | POST | Execute attack simulation |
+| `/simulation/run` | POST | Execute a simulation scenario |
+
+### Chat — `/chat`
+
+The chat router provides real-time messaging and GuardLayer-aware message handling. Use **`/docs`** for the current HTTP endpoints and WebSocket contract.
+
+### Transactions — `/transactions`
+
+The transaction router provides transaction-risk evaluation and related security controls. Use **`/docs`** for the current request/response schemas.
+
+### System
+
+| Endpoint | Method | Description |
+|----------|--------|-------------|
+| `/` | GET | Backend status and enabled modules |
+| `/health` | GET | Health check |
 
 ---
 
@@ -322,9 +412,9 @@ npm run build
 
 Python 3.10+<br/>
 FastAPI<br/>
-SQLAlchemy<br/>
-scikit-learn<br/>
-OpenAI API
+SQLAlchemy 2<br/>
+PostgreSQL / asyncpg<br/>
+OpenAI-compatible OpenRouter API
 
 </td>
 <td align="center" width="25%">
@@ -335,27 +425,28 @@ React 18<br/>
 Vite<br/>
 TailwindCSS<br/>
 Recharts<br/>
-React-Leaflet
+React-Leaflet<br/>
+Wagmi / Viem / RainbowKit
 
 </td>
 <td align="center" width="25%">
 
 **Blockchain**
 
-Solidity<br/>
+Solidity 0.8.19+<br/>
 Hardhat<br/>
 Ethers.js<br/>
-Sepolia Testnet
+Ethereum Sepolia
 
 </td>
 <td align="center" width="25%">
 
 **SDK**
 
-Vanilla JavaScript<br/>
+JavaScript<br/>
 esbuild<br/>
-DOM Injection<br/>
-Event System
+Authentication<br/>
+GuardLayer integration
 
 </td>
 </tr>
@@ -365,77 +456,103 @@ Event System
 
 ## 🔐 Security & Privacy
 
-| Category | Approach |
-|----------|----------|
-| **Data Hashing** | SHA256/Keccak256 before storage |
-| **Content Scanning** | Local regex first, LLM fallback with opt-in |
-| **Blockchain Data** | Merkle roots only — no raw data on-chain |
-| **Explainability** | SHAP values for all flagged events |
-| **Session Security** | JWT with expiration + nonce validation |
+| Category | Current approach |
+|----------|------------------|
+| **Authentication** | SIWE nonce validation + JWT sessions |
+| **Login Risk** | History-aware weighted scoring with explainable factors |
+| **Content Scanning** | Local detection first; optional LLM analysis |
+| **Transaction Protection** | Dedicated transaction-risk service and router |
+| **Audit Storage** | Merkle roots and batch metadata on-chain |
+| **Messages** | Expiration and background cleanup |
+| **Secrets** | Environment variables; keep production secrets out of Git |
+
+### Important deployment note
+
+SentinelX is a security platform/demo, but it should not be treated as production-hardened solely from the README. Before production deployment, review authentication, secret management, database security, CORS, rate limiting, wallet/transaction policies, smart-contract ownership, RPC security, and audit-log integrity.
 
 ---
 
 ## 📁 Project Structure
 
-```
-SentinalX/
-├── backend/                 # FastAPI backend
+```text
+Sentinel-X/
+├── backend/
 │   ├── app/
-│   │   ├── routes/         # API endpoints
-│   │   ├── models/         # Database models
-│   │   ├── services/       # Business logic
-│   │   └── utils/          # Helpers
-│   ├── main.py             # App entry point
-│   └── requirements.txt
+│   │   ├── models/             # SQLAlchemy models
+│   │   ├── routers/            # API / WebSocket routes
+│   │   │   ├── auth.py
+│   │   │   ├── risk.py
+│   │   │   ├── guard.py
+│   │   │   ├── audit.py
+│   │   │   ├── simulation.py
+│   │   │   ├── dashboard.py
+│   │   │   ├── chat.py
+│   │   │   └── transactions.py
+│   │   └── services/            # Core security/business logic
+│   │       ├── enforcement.py
+│   │       ├── guard_layer.py
+│   │       ├── jwt_utils.py
+│   │       ├── merkle.py
+│   │       ├── risk_engine.py
+│   │       └── transaction_risk.py
+│   ├── main.py                  # FastAPI application
+│   ├── requirements.txt
+│   ├── runtime.txt
+│   └── .env.example
 │
-├── frontend/               # React frontend
-│   ├── src/
-│   │   ├── components/     # UI components
-│   │   ├── pages/          # Route pages
-│   │   ├── api/            # API client
-│   │   └── store/          # State management
-│   └── package.json
+├── frontend/
+│   ├── src/                     # React application
+│   ├── public/
+│   ├── package.json
+│   ├── vite.config.js
+│   ├── tailwind.config.js
+│   └── vercel.json
 │
-├── contracts/              # Solidity smart contracts
+├── contracts/
 │   ├── contracts/
 │   │   └── AuditProofBatch.sol
-│   └── scripts/
-│       └── deploy.js
-│
-├── sdk/                    # JavaScript SDK
-│   ├── src/
-│   │   ├── auth.js
-│   │   └── guard.js
+│   ├── scripts/
+│   │   └── deploy.js
+│   ├── hardhat.config.js
 │   └── package.json
 │
-└── README.md
+├── sdk/                         # JavaScript SDK
+└── readme.md
 ```
 
 ---
 
 ## 🤝 Contributing
 
-Contributions are welcome! Please feel free to submit a Pull Request.
+Contributions are welcome.
 
-1. Fork the repository
-2. Create your feature branch (`git checkout -b feature/amazing-feature`)
-3. Commit your changes (`git commit -m 'Add amazing feature'`)
-4. Push to the branch (`git push origin feature/amazing-feature`)
-5. Open a Pull Request
+1. Fork the repository.
+2. Create a feature branch:
+   ```bash
+   git checkout -b feature/my-feature
+   ```
+3. Make and test your changes.
+4. Commit with a clear message:
+   ```bash
+   git commit -m "Add my feature"
+   ```
+5. Push the branch and open a Pull Request.
+
+For security-sensitive changes, include the threat model, affected trust boundaries, and test coverage in the PR description.
 
 ---
 
 ## 📄 License
 
-This project is licensed under the **MIT License** — see the [LICENSE](LICENSE) file for details.
+This project is licensed under the **MIT License** — see the `LICENSE` file for details.
 
 ---
 
 <p align="center">
-  <strong>Built with ❤️ for the Web3 community</strong><br/>
-  <a href="https://github.com/MohitRawat017/SentinalX">⭐ Star this repo</a> · 
-  <a href="https://github.com/MohitRawat017/SentinalX/issues">🐛 Report Bug</a> · 
-  <a href="https://github.com/MohitRawat017/SentinalX/issues">💡 Request Feature</a>
+  <strong>Built with ❤️ for the Web3 security community</strong><br/>
+  <a href="https://github.com/Melioskf/Sentinel-X">⭐ Star this repo</a> ·
+  <a href="https://github.com/Melioskf/Sentinel-X/issues">🐛 Report Bug</a> ·
+  <a href="https://github.com/Melioskf/Sentinel-X/issues">💡 Request Feature</a>
 </p>
 
 ---
