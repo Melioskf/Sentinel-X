@@ -23,7 +23,7 @@
     "recharts": "^2.10.3",
     "viem": "^2.7.1",
     "wagmi": "^2.5.7",
-    "zustand": "^4.5.0"
+    "zustand": "^5.0.14"
   },
   "devDependencies": {
     "@types/react": "^18.2.48",
