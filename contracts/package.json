@@ -9,7 +9,7 @@
     "verify": "npx hardhat verify --network sepolia"
   },
   "devDependencies": {
-    "@nomicfoundation/hardhat-toolbox": "^4.0.0",
+    "@nomicfoundation/hardhat-toolbox": "^7.0.0",
     "hardhat": "^2.19.4",
     "dotenv": "^16.3.1"
   }
