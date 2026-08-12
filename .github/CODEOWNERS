@@ -1,0 +1,10 @@
+# CODEOWNERS defines who should review changes to each area.
+# This repository currently has a single maintainer.
+
+* @Melioskf
+.github/ @Melioskf
+backend/ @Melioskf
+frontend/ @Melioskf
+contracts/ @Melioskf
+sdk/ @Melioskf
+docs/ @Melioskf

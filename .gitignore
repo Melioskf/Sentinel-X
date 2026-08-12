@@ -16,6 +16,8 @@ build/
 *.egg
 .eggs/
 .pytest_cache/
+.mypy_cache/
+.ruff_cache/
 
 # Node
 node_modules/
@@ -23,6 +25,7 @@ node_modules/
 dist/
 *.tsbuildinfo
 .pnpm-store/
+.npm/
 
 # Vite
 .vite/
@@ -57,14 +60,16 @@ npm-debug.log*
 yarn-debug.log*
 yarn-error.log*
 
-# Misc
+# Coverage / caches
 coverage/
 .nyc_output/
 .cache/
+
+# Temporary files
 tmp/
 temp/
-
-# Temp files
 tmpclaude-*
-backend/.env.example
-nul 
+
+# Local tooling
+*.local
+nul
