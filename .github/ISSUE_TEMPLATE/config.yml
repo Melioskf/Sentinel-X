@@ -1,0 +1,8 @@
+blank_issues_enabled: false
+contact_links:
+  - name: Security vulnerability report
+    url: https://github.com/Melioskf/Sentinel-X/blob/main/SECURITY.md
+    about: Follow the private disclosure process. Do not post vulnerabilities publicly.
+  - name: Project documentation
+    url: https://github.com/Melioskf/Sentinel-X/tree/main/docs
+    about: Read the engineering and operational documentation first.
