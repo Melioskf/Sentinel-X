@@ -13,7 +13,7 @@ passlib[bcrypt]==1.7.4
 eth-account==0.11.3
 
 # Database
-sqlalchemy==2.0.27
+sqlalchemy==2.0.51
 asyncpg==0.29.0
 
 # LLM (OpenRouter) - optional, graceful fallback
