@@ -20,7 +20,7 @@
     "react-leaflet": "^4.2.1",
     "react-markdown": "^9.0.1",
     "react-router-dom": "^6.21.3",
-    "recharts": "^2.10.3",
+    "recharts": "^3.10.1",
     "viem": "^2.7.1",
     "wagmi": "^2.5.7",
     "zustand": "^4.5.0"
